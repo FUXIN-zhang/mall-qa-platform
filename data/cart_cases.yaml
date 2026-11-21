@@ -1,0 +1,23 @@
+- case_id: "CART_001"
+  case_name: "正常添加1件有效商品到购物车"
+  goods_id: 10700
+  goods_count: 1
+  expect_code: 200
+  expect_msg: "SUCCESS"
+  expect_in_db: true
+
+- case_id: "CART_002"
+  case_name: "边界值测试-单次添加上限5件商品"
+  goods_id: 10700
+  goods_count: 5
+  expect_code: 200
+  expect_msg: "SUCCESS"
+  expect_in_db: true
+
+- case_id: "CART_003"
+  case_name: "异常边界-单次添加6件触发最大数量拦截"
+  goods_id: 10700
+  goods_count: 6
+  expect_code: 500
+  expect_msg: "超出单个商品的最大购买数量"
+  expect_in_db: false

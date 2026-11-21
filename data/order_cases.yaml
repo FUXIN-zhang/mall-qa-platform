@@ -1,0 +1,15 @@
+- case_id: "ORDER_001"
+  case_name: "正常创建订单-校验订单落库与商品库存准确扣减"
+  goods_id: 10700
+  buy_count: 2
+  use_valid_address: true
+  expect_code: 200
+  expect_order_created: true
+
+- case_id: "ORDER_002"
+  case_name: "异常创建订单-使用不存在的收货地址ID触发拦截且库存不扣减"
+  goods_id: 10700
+  buy_count: 1
+  use_valid_address: false
+  expect_code: 500
+  expect_order_created: false

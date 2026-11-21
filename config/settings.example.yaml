@@ -1,0 +1,15 @@
+env:
+  api_base_url: "http://127.0.0.1:28019/api/v1"
+  web_base_url: "http://127.0.0.1"
+
+account:
+  login_name: "13700002703"
+  password: "CHANGE_ME"
+
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "CHANGE_ME"
+  database: "newbee_mall_db_v2"
+  charset: "utf8mb4"
